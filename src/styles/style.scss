@@ -1,0 +1,75 @@
+#w-full{
+    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+#w-1200{
+    width: 1200px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+//포인트
+.pointer{
+    cursor: pointer;
+}
+
+//버튼 style
+button{
+    border-width: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.plus_btn {
+    border: 2px solid #afafaf;
+    width: 24px;
+    height: 24px;
+    padding: 1px;
+}
+
+.plus {
+    position: relative;
+    width: 18px;
+    height: 18px;
+
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background-color: #adadad;
+        transition: transform 300ms cubic-bezier(0.4, 0, 0.4, 1);
+    }
+
+    /* Vertical line */
+    &:before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+        //transform: translateX(-50%);
+    }
+
+    /* horizontal line */
+    &:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        //transform: translateY(-50%);
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        &:before {
+            transform: rotate(360deg);
+        }
+
+        &:after {
+            transform: rotate(360deg);
+        }
+    }
+}
